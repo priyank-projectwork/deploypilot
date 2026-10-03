@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deploypilot"
+version = "0.1.0"
+description = "An agentic AI assistant for investigating software deployment problems."
+readme = "README.md"
+requires-python = ">=3.14"
+license = "MIT"
+dependencies = [
+    "google-adk==2.11.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==9.1.1",
+]
+
+[tool.pytest]
+testpaths = ["tests"]
+addopts = ["-ra"]
